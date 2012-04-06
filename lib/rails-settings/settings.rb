@@ -4,7 +4,7 @@ module RailsSettings
 		self.table_name = 'settings'
     
     class SettingNotFound < RuntimeError; end
-    
+    attr_accessible :var
     cattr_accessor :defaults
     @@defaults = {}.with_indifferent_access
     
